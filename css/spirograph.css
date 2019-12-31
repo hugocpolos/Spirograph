@@ -1,0 +1,79 @@
+body
+{
+	width:100%;
+	padding: 0;
+	margin: 0;
+	background-color: #222222;
+}
+button
+{
+	border: 0;
+	padding: 5px;
+	width: 100px;
+	background-color: #969696;
+	cursor: pointer;
+	color: #ccc;
+}
+button:hover
+{
+	background-color: #d4d4d4e3;
+	color: #eee;
+}
+
+#save2imgbtn, #save2gifbtn
+{
+	position: fixed;
+	left: 200px;
+}
+
+#save2gifbtn
+{
+	left: 300px;
+}
+
+#inputwrapper
+{
+	background-color: #6b6b6b;
+	color: #ccc;
+	position: fixed;
+	width: 200px;
+	height: 100%;
+    overflow-y: auto;
+}
+
+.input
+{
+	border-bottom: dashed 2px #ffffff;
+	margin-bottom: 8px;
+}
+
+#addcircle
+{
+	display: block;
+	width: 100%;
+	position: sticky;
+	bottom: 26px;
+	background-color: #638c90;
+}
+
+#delcircle
+{
+	display: block;
+	width: 100%;
+	position: sticky;
+	bottom: 0px;
+	background-color: #805050;
+}
+
+footer
+{
+	position: fixed;
+	bottom: 10;
+	right: 5;
+}
+
+footer a
+{
+	text-decoration: none;
+	color: #eee;
+}

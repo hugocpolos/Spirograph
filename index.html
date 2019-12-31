@@ -1,0 +1,71 @@
+<html>
+<head>
+	<title>Spirograph</title>
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- JQuery -->
+	<script src="include/jquery-3.4.1.slim.min.js"></script>	
+
+	<!-- J5.js -->
+	<script src="include/p5.js"></script>
+	
+	<!-- CCapture.js and its dependencies -->
+	<script src="include/CCapture.all.min.js"></script>
+	<script src="include/gif.worker.js"></script>
+
+	<!-- recorder.js -->
+	<script src="include/recorder.js"></script>
+
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="include/fontawesome.all.min.css" />
+
+	<!-- Source code of the spirograph app -->
+	<script src="src/getconfig.js"></script>
+	<script src="src/line.js"></script>
+	<script src="src/spirograph.js"></script>
+	<script src="src/save_as_image.js"></script>
+
+	<script src="src/main.js"></script>
+	<!-- CSS stylesheet -->
+	<link rel="stylesheet" href="css/spirograph.css"/>
+</head>
+
+<body>
+	<button id="save2imgbtn" onclick="save_as_tif();"><i class="fas fa-file-download"></i> tif</button>
+	<button id="save2gifbtn" onclick="save_as_gif();"><i class="fas fa-file-download"></i> gif</button>
+	<div id="inputwrapper">
+		<div id="inputbox"></div>
+		<button id="addcircle" onclick="add_line();restart();">Add circle</i></button>
+		<button id="delcircle" onclick="del_line();restart();">Remove circle</i></button>
+	</div>
+	<footer>
+		<a href="http://github.com/hugocpolos">Created by hugocpolos</a>
+	</footer>
+</body>
+
+<script type="text/javascript">
+	var slider = document.getElementsByClassName("slider");
+	var output = document.getElementsByClassName("output");
+	for (let i = 0; i < slider.length; i++)
+	{
+		output[i].innerHTML = slider[i].value; // Display the default slider value
+	}
+
+	// Update the current slider value (each time you drag the slider handle)
+	function update_rage_value(a) {
+  		output[int(a.id)].innerHTML = a.value;
+	}
+
+	function toogle_rotate(a) {
+		a.value = (a.value == '+') ? '-' : '+';
+		a.innerHTML = (a.value == '+') ? "Direction Positive" : "Direction Negative";
+	}
+
+	window.onload = function(){
+		draw();
+	}
+</script>
+
+</html>
