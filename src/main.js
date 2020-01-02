@@ -1,6 +1,6 @@
 function setup()
 {
-	console.log('rodou setup');
+	// console.log('rodou setup');
 	record_gif = false;
 	recorder = null;
 	if (record_gif)
@@ -53,7 +53,7 @@ function draw()
 
 function keyPressed()
 {
-	console.log(keyCode);
+	// console.log(keyCode);
 	if (keyCode == 32) //spacebar
 	{
 		s.toogle_vision();
@@ -69,6 +69,11 @@ function windowResized()
 	// resizeCanvas(window.innerWidth,window.innerHeight);
 	// s.centralize();
 	// background("#222222");
+}
+
+function reload_spirograph()
+{
+	s.reload(getconfig());
 }
 
 function restart()

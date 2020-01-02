@@ -47,6 +47,17 @@ button:hover
 	margin-bottom: 8px;
 }
 
+.two-column 
+{
+	width: 49%;
+	display: inline-block;
+	font-size: 0.9em;
+}
+.column
+{
+	width: 70%;
+}
+
 #addcircle
 {
 	display: block;

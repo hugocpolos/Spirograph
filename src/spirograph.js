@@ -73,4 +73,17 @@ class Spirograph
 		background('#222');
 		this.pattern_vision = !this.pattern_vision;
 	}
+
+	reload(conf)
+	{
+		for (let i = 0; i < conf.lines.length; i++)
+		{
+			this.l[i].length = conf.lines[i].line_length;
+			this.l[i].rot_speed = conf.lines[i].rotation_speed;
+			this.l[i].update_rot_direction(conf.lines[i].rotation_direction);
+			this.l[i].draw = conf.lines[i].draw;
+			this.l[i].paint_radius_x = conf.lines[i].paint_radius_x;
+			this.l[i].paint_radius_y = conf.lines[i].paint_radius_y;
+		}
+	}
 }
