@@ -64,23 +64,6 @@ function add_line()
 	</div>\
 	" 
 	$("#inputbox").append(new_input);
-	/*<div class="input">
-			<div>Line 1</div>
-			Line length:
-			<div class="slidecontainer">
-			  <input type="range" id="0" oninput="update_rage_value(this);" min="1" max="100" value="50" class="slider linelength">
-			  <span class="output"></span>
-			</div>
-			Rotation Speed:
-			<div class="slidecontainer">
-			  <input type="range" id="1" oninput="update_rage_value(this);" min="1" max="500" value="250" class="slider rotationspeed">
-			  <span class="output"></span>
-			</div>
-			<!-- Rotation Direction -->
-			<button style="float: right;display: block; width: 100%" value="+" onclick="toogle_rotate(this)" class="rotationdirection">Direction Positive</i></button>
-			Draw:
-			<input style="float: right; display: block;" type="checkbox" class="draw">
-	</div>*/
 }
 
 function del_line()
@@ -89,6 +72,6 @@ function del_line()
 	if(line_counter > 0)
 	{
 		line_counter--;
-		slider_counter -= 2;
+		slider_counter -= 4;
 	}
 }
